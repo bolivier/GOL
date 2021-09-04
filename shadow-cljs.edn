@@ -1,0 +1,12 @@
+{:source-paths ["src"]
+ :builds       {:game {:target     :browser
+                       :output-dir "resources/public/static/js"
+                       :asset-path "js"
+                       :modules    {:game {:init-fn gol.core/-main}}}}
+ 
+ :dev-http {8080 "resources/public"}
+ 
+ :dependencies [[re-frame "1.2.0"]
+                [reagent "1.0.0"]                
+                [binaryage/devtools "1.0.2"]
+                [org.clojure/test.check "1.1.0"]]}
